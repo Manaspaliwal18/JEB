@@ -29,19 +29,19 @@
     },
     {
       "id": 4,
-      "name": "Bikaner Heritage",
-      "city": "Bikaner",
+      "name": "Lime Light",
+      "city": "Udaipur",
       "baseRating": 4,
-      "logo": "images/bikaner-heritage.png",
+      "logo": "images/Lime-light.png",
       "ownerId": null,
       "verified": false
     },
     {
       "id": 5,
-      "name": "Lime Light",
-      "city": "Udaipur",
+      "name": "Bikaner Heritage",
+      "city": "Bikaner",
       "baseRating": 4,
-      "logo": "images/Lime-light.png",
+      "logo": "images/bikaner-heritage.png",
       "ownerId": null,
       "verified": false
     }
