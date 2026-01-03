@@ -369,65 +369,6 @@ section.active {
     max-width: 900px;
     letter-spacing: 0.2px;
 }
-/* ===============================
-   HERO SEARCH — MOBILE
-================================ */
-
-@media (max-width: 768px) {
-    .search-pill {
-        width: 100%;
-        padding: 10px 12px;
-    }
-
-    .search-icon {
-        font-size: 0.95rem;
-    }
-
-    .search-btn {
-        padding: 8px 12px;
-        font-size: 0.85rem;
-    }
-}
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.25;
-    }
-
-    .hero-content p {
-        font-size: 0.95rem;
-    }
-}
-
-/* ===============================
-   HERO — MOBILE SPACING FIX
-================================ */
-
-@media (max-width: 768px) {
-    .hero-banner {
-        margin-top: 20px;   /* pushes hero below nav */
-        padding: 60px 16px;
-    }
-}
-
-
-/* ===============================
-   SECTION TITLE
-================================ */
-.section-title {
-    margin: 40px 0 18px;
-    font-size: 1.35rem;
-    font-weight: 600;
-}
-
-/* ===============================
-   STORE GRID
-================================ */
-.store-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-}
 
 /* ===============================
    CARD
@@ -995,7 +936,7 @@ textarea {
     color: var(--primary-gold);
 }
 /* ===============================
-   MOBILE NAVIGATION
+   MOBILE NAVIGATION (FINAL)
 ================================ */
 
 .nav-toggle {
@@ -1003,6 +944,7 @@ textarea {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .nav-toggle span {
@@ -1010,10 +952,16 @@ textarea {
     height: 2px;
     background: #333;
     border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Mobile behavior */
+/* MOBILE */
 @media (max-width: 768px) {
+
+    nav {
+        position: relative;
+    }
+
     .nav-toggle {
         display: flex;
     }
@@ -1022,18 +970,154 @@ textarea {
         position: absolute;
         top: 64px;
         right: 16px;
-        background: #fff;
+
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 18px;
+
+        display: none;
         flex-direction: column;
         gap: 14px;
-        padding: 16px;
-        border-radius: 14px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        display: none;
+
         min-width: 220px;
-        z-index: 999;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+        z-index: 1000;
     }
 
     .nav-links.show {
         display: flex;
+        animation: fadeSlide 0.25s ease;
+    }
+
+    .nav-links a {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================================
+   PREMIUM GLASS-MORPHISM HERO (FINAL)
+================================== */
+
+.hero-banner {
+    position: relative;
+    background:
+        linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%),
+        url("images/jewelry-banner.png") no-repeat center center;
+    background-color: #ffffff;
+
+    padding: 60px 5%;
+    margin: 16px;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    min-height: 420px;
+    overflow: hidden;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* HERO CONTENT */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    color: rgba(255,255,255,0.95);
+    font-size: 1rem;
+}
+
+/* SEARCH BAR */
+.search-pill {
+    background: rgba(255,255,255,0.98);
+    padding: 10px 16px;
+    border-radius: 999px;
+    width: 100%;
+    max-width: 460px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    z-index: 3;
+}
+
+.search-pill input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    background: transparent;
+}
+
+/* ==================================
+   TRUST STRIP SAFETY
+================================== */
+
+.trust-strip {
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+}
+
+/* ==================================
+   MOBILE FIX — NO OVERLAP GUARANTEE
+================================== */
+
+@media (max-width: 768px) {
+
+    .hero-banner {
+        padding: 42px 16px;
+        min-height: auto;
+        gap: 24px;
+        margin-bottom: 42px; /* 🔥 KEY FIX */
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .search-pill {
+        max-width: 100%;
+    }
+
+    .section-title {
+        margin-top: 32px;
     }
 }
