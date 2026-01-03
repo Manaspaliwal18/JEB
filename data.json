@@ -23,7 +23,7 @@
       "name": "Aurea Lux",
       "city": "Jodhpur",
       "baseRating": 5,
-      "logo": "images/aurea-lux.png",
+      "logo": "images/aurea lux.png",
       "ownerId": null,
       "verified": false
     },
@@ -41,7 +41,7 @@
       "name": "Lime Light",
       "city": "Udaipur",
       "baseRating": 4,
-      "logo": "images/lime-light.png",
+      "logo": "images/Lime-light.png",
       "ownerId": null,
       "verified": false
     }
