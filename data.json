@@ -1,0 +1,114 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "name": "Udaipur Pearl Palace",
+      "city": "Udaipur",
+      "baseRating": 5,
+      "logo": "images/udaipur-pearl-palace.png",
+      "ownerId": null,
+      "verified": false
+    },
+    {
+      "id": 2,
+      "name": "Jaipur Royal Jewelers",
+      "city": "Jaipur",
+      "baseRating": 4,
+      "logo": "images/jaipur-royal-jewels.png",
+      "ownerId": null,
+      "verified": false
+    },
+    {
+      "id": 3,
+      "name": "Aurea Lux",
+      "city": "Jodhpur",
+      "baseRating": 5,
+      "logo": "images/aurea-lux.png",
+      "ownerId": null,
+      "verified": false
+    },
+    {
+      "id": 4,
+      "name": "Bikaner Heritage",
+      "city": "Bikaner",
+      "baseRating": 4,
+      "logo": "images/bikaner-heritage.png",
+      "ownerId": null,
+      "verified": false
+    },
+    {
+      "id": 5,
+      "name": "Lime Light",
+      "city": "Udaipur",
+      "baseRating": 4,
+      "logo": "images/lime-light.png",
+      "ownerId": null,
+      "verified": false
+    }
+  ],
+
+  "jewelers": [
+    {
+      "id": 101,
+      "ownerName": "Demo Jeweler",
+      "email": "demo@jewelbazaar.com",
+      "password": "demo123",
+      "storeId": null,
+      "bisDeclared": true,
+      "bisCertificateImage": "pending-review",
+      "verificationStatus": "pending",
+      "createdAt": "2026-01-01T10:00:00Z"
+    }
+  ],
+
+  "reviews": [
+    {
+      "id": 1,
+      "storeId": 1,
+      "user": "Rahul Sharma",
+      "rating": 5,
+      "text": "बहुत ही शानदार क्वालिटी और असली मोतियों का कलेक्शन। स्टाफ बहुत विनम्र था।",
+      "createdAt": "2026-01-01T11:00:00Z"
+    },
+    {
+      "id": 2,
+      "storeId": 1,
+      "user": "Ananya Kapoor",
+      "rating": 4,
+      "text": "Beautiful pearl jewelry and genuine craftsmanship. Prices are fair for the quality.",
+      "createdAt": "2026-01-01T12:00:00Z"
+    },
+    {
+      "id": 3,
+      "storeId": 2,
+      "user": "Vikram Jain",
+      "rating": 5,
+      "text": "जयपुर की पारंपरिक ज्वेलरी का बेहतरीन कलेक्शन। शादी के लिए परफेक्ट जगह।",
+      "createdAt": "2026-01-02T09:30:00Z"
+    },
+    {
+      "id": 4,
+      "storeId": 2,
+      "user": "Neha Mehta",
+      "rating": 4,
+      "text": "Loved the royal designs. Staff explained gold purity and pricing very transparently.",
+      "createdAt": "2026-01-02T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "storeId": 3,
+      "user": "Aman Agarwal",
+      "rating": 5,
+      "text": "Premium feel, modern designs, and excellent finishing. Aurea Lux is truly luxury.",
+      "createdAt": "2026-01-02T12:15:00Z"
+    },
+    {
+      "id": 6,
+      "storeId": 3,
+      "user": "Pooja Rajput",
+      "rating": 5,
+      "text": "डिज़ाइन बहुत क्लासी हैं और क्वालिटी टॉप-नॉच है। ब्रांड पर पूरा भरोसा हुआ।",
+      "createdAt": "2026-01-02T13:00:00Z"
+    }
+  ]
+}

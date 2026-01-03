@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewel e Bazaar | Jewelry Reviews & Ratings</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- ================= NAVIGATION ================= -->
+<nav>
+    <a class="logo" onclick="showPage('home')">
+        <img src="images/jeb-logo.png" alt="Jewel e Bazaar" />
+    </a>
+
+    <!-- HAMBURGER ICON (ADD THIS) -->
+    <div class="nav-toggle" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a id="nav-home" class="active" onclick="showPage('home')">Home</a>
+        <a id="nav-customer" onclick="showPage('customer')">Submit Review</a>
+        <a id="nav-register" onclick="showPage('register')">Register as Jeweler</a>
+        <a id="nav-jeweler" onclick="showPage('jeweler')">Jeweler Portal</a>
+        <a id="nav-about" onclick="showPage('about')">About Us</a>
+    </div>
+</nav>
+
+
+<div class="container">
+
+<!-- ================= HOME ================= -->
+<section 
+    <div class="nav-links">
+    <a id="nav-home" class="active" onclick="showPage('home')">Home</a>
+    <a id="nav-customer" onclick="showPage('customer')">Submit Review</a>
+    <a id="nav-register" onclick="showPage('register')">Register as Jeweler</a>
+    <a id="nav-jeweler" onclick="showPage('jeweler')">Jeweler Portal</a>
+    <a id="nav-about" onclick="showPage('about')">About Us</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<!-- ================= HOME ================= -->
+<section id="home" class="active">
+
+    <!-- HERO BANNER -->
+    <div class="hero-banner">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Discover Trusted Jewelry Brands & Jewelers Near You</h1>
+            <p>Verified reviews & ratings to help you buy jewelry with confidence.</p>
+
+            <!-- HERO SEARCH -->
+            <div class="hero-search">
+                <div class="search-pill">
+                    <span class="search-icon">📍</span>
+                    <input type="text" placeholder="Search jewelers, brands or city" />
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip trust-outside">
+        ✔ Real Customer Reviews &nbsp; • &nbsp;
+        ✔ No Paid Listings &nbsp; • &nbsp;
+        ✔ Transparent Ratings
+    </div>
+
+    <!-- TOP JEWELERS -->
+    <h2 class="section-title">Top Rated Jewelers</h2>
+
+    <div class="slider-section">
+        <div class="slider-wrapper">
+            <button class="slider-btn left" onclick="scrollSlider(-1)">‹</button>
+            <div class="slider" id="top-jewelers-slider"></div>
+            <button class="slider-btn right" onclick="scrollSlider(1)">›</button>
+        </div>
+    </div>
+
+    <!-- ALL STORES -->
+    <h2 class="section-title">All Jewelers</h2>
+    <div id="store-list" class="store-grid"></div>
+
+</section>
+
+<!-- ================= CUSTOMER ================= -->
+<section id="customer">
+
+    <!-- Header -->
+    <div class="hero">
+        <h1>Share Your Experience</h1>
+        <p>Your review helps others choose trusted jewelers.</p>
+        <p style="font-size:0.9rem; color:#777;">
+            Public review • No login required
+        </p>
+    </div>
+
+    <!-- Review Card -->
+    <div class="card form-card" style="max-width:620px; margin:auto;">
+
+        <form id="review-form">
+
+            <!-- Store -->
+            <label for="store-dropdown">Jewelry Store</label>
+            <select id="store-dropdown" required></select>
+
+            <!-- Rating -->
+            <label for="star-rating">Your Rating</label>
+            <select id="star-rating" required>
+                <option value="5">★★★★★ Excellent</option>
+                <option value="4">★★★★☆ Good</option>
+                <option value="3">★★★☆☆ Average</option>
+                <option value="2">★★☆☆☆ Poor</option>
+                <option value="1">★☆☆☆☆ Very Bad</option>
+            </select>
+
+            <!-- Review -->
+            <label for="review-text">Your Review</label>
+            <textarea 
+                id="review-text"
+                placeholder="What did you like or dislike? Quality, pricing, staff behavior…"
+                rows="4"
+                required
+            ></textarea>
+
+            <!-- Info -->
+            <p style="
+                font-size:0.8rem;
+                color:#777;
+                margin-top:8px;
+            ">
+                Your review will be visible publicly.
+            </p>
+
+            <!-- Submit -->
+            <button type="submit" class="btn">
+                Submit Review
+            </button>
+
+        </form>
+    </div>
+
+</section>
+
+<!-- ================= JEWELER REGISTER ================= -->
+<section id="register">
+
+    <div class="hero">
+        <h1>Register Your Jewelry Business</h1>
+        <p>List your brand, collect verified reviews & build customer trust.</p>
+    </div>
+
+    <div class="card form-card">
+
+        <form id="register-form">
+
+            <label>Owner Name</label>
+            <input type="text" id="reg-owner" required />
+
+            <label>Business Email</label>
+            <input type="email" id="reg-email" required />
+
+            <label>Password</label>
+            <input type="password" id="reg-password" required />
+
+            <label>Store / Brand Name</label>
+            <input type="text" id="reg-store" required />
+            <label>Business Location</label>
+            <select id="register-city" required>
+                <option value="">Select City</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Jodhpur">Jodhpur</option>
+                <option value="Bikaner">Bikaner</option>
+                <option value="Ajmer">Ajmer</option>
+                <option value="Kota">Kota</option>
+                <option value="Alwar">Alwar</option>
+                <option value="Bhilwara">Bhilwara</option>
+        </select>
+                 <p class="helper-text">
+                Your city helps customers discover trusted jewelers Nearby
+                </p>
+
+            <label>Store Logo</label>
+            <input type="file" id="reg-logo" accept="image/*" />
+
+            <label class="checkbox-label">
+            <input type="checkbox" required />
+            <span>
+            I confirm this business sells <strong>BIS Hallmark certified jewelry</strong>
+        </span>
+    </label>
+
+
+            <button type="submit" class="btn">
+                Register Business
+            </button>
+
+            <p class="helper-text">
+                Your listing will be reviewed before verification badge is shown.
+            </p>
+
+        </form>
+    </div>
+
+</section>
+
+
+<!-- ================= JEWELER ================= -->
+<section id="jeweler">
+
+    <div class="hero">
+        <h1>Jeweler Dashboard</h1>
+        <p>Monitor customer feedback and reputation.</p>
+    </div>
+
+    <div class="store-select-header">
+        <label>Select Store</label>
+        <select id="jeweler-store-select" onchange="loadJewelerReviews()"></select>
+    </div>
+
+    <div class="card">
+        <h2 id="jeweler-store-name"></h2>
+        <div id="jeweler-reviews-list"></div>
+    </div>
+
+</section>
+    <!-- ================= ABOUT ================= -->
+<section id="about">
+
+    <div class="hero">
+        <h1>
+        About <span class="brand-gold">Jewel</span> e Bazaar
+    </h1>
+        <p>Building trust in the jewelry buying experience.</p>
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-block">
+            <h2>Why Jewel e Bazaar?</h2>
+            <p>
+                Jewelry is one of the most emotional and high-value purchases people make,
+                yet finding trustworthy jewelers is still difficult.
+                Jewel e Bazaar was created to bring transparency, verified reviews,
+                and confidence to jewelry buyers.
+            </p>
+        </div>
+
+        <div class="about-block">
+            <h2>What We Do</h2>
+            <ul>
+                <li>Help customers discover trusted local jewelers</li>
+                <li>Provide genuine, public customer reviews</li>
+                <li>Allow jewelers to build credibility through transparency</li>
+            </ul>
+        </div>
+
+        <div class="about-block">
+            <h2>For Jewelers</h2>
+            <p>
+                Jewel e Bazaar enables jewelry businesses to list their brand,
+                showcase authenticity, and earn customer trust through real reviews —
+                without paid rankings or hidden promotions.
+            </p>
+        </div>
+
+        <div class="about-block vision">
+    <h2>Our Vision</h2>
+    <p>
+        Our vision is to build <strong>India’s most trusted jewelry e-marketplace</strong> —
+        a platform that seamlessly connects customers with verified jewelers.
+        In the long term, Jewel e Bazaar aims to enable customers to
+        <strong>discover, compare, decide, and book jewelry online</strong>,
+        while completing their purchase securely by visiting the showroom.
+    </p>
+    <p>
+        By combining digital discovery with offline trust,
+        we want to modernize the jewelry buying experience
+        without losing the authenticity and assurance that customers value.
+    </p>
+</div>
+
+    </div>
+
+</section>
+
+</div>
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
