@@ -210,7 +210,37 @@ section.active {
     margin-bottom: 28px;
     overflow: hidden;
 }
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-banner {
+        /* Reduce the massive desktop padding to fit mobile screens */
+        padding: 40px 16px 40px; 
+        
+        /* Add margin so the card doesn't touch the phone edges */
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
 
+        /* Ensure the background image stays centered on small screens */
+        background-position: center center;
+        
+        /* Optional: Makes the corners slightly smaller to match mobile scale */
+        border-radius: 12px;
+    }
+
+    /* Adjust the Heading inside the hero for mobile */
+    .hero-banner h1 {
+        font-size: 24px; /* Smaller font size so it doesn't wrap awkwardly */
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    /* Adjust the Sub-text */
+    .hero-banner p {
+        font-size: 14px;
+        padding: 0 10px; /* Prevents text from hitting the hero edges */
+    }
+}
 /* DARK OVERLAY — CENTER-FOCUSED FOR READABILITY */
 .hero-overlay {
     position: absolute;
