@@ -1,13 +1,12 @@
 {
   "name": "jewel-e-bazaar",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Jewelry discovery and trust platform MVP",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Manas Paliwal",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
